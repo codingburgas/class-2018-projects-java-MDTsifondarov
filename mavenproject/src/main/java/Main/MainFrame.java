@@ -35,5 +35,11 @@ public class MainFrame {
 
 		  Connecting conn = new Connecting();
           conn.showBooks();
+          System.out.println();
+          conn.addBook("asd", "asd", "asd", "asd", "asd");
+          conn.addBook("asd1", "asd1", "asd1", "asd1", "asd1");
+          System.out.println();
+          conn.showBooks();
+          
 	}
 }
