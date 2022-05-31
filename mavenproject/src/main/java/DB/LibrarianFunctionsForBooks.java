@@ -1,31 +1,30 @@
 package DB;
 
-
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
 public class LibrarianFunctionsForBooks extends Connecting {
-	
+
 	public LibrarianFunctionsForBooks() throws SQLException {
 		super();
 	}
-	
-	public void addBook(String title,String publisher,String genre,String author,String year) throws SQLException{
-		String query1 = String.format(
-				"INSERT INTO Books ([Book_title] ,[Book_publisher],[Book_genre],[Book_author],[Published_year])"+
-				    "VALUES (?,?,?,?,?)");
-		
+
+	public void addBook(String title, String publisher, String genre, String author, String year) throws SQLException {
+		String query1 = String
+				.format("INSERT INTO Books ([Book_title] ,[Book_publisher],[Book_genre],[Book_author],[Published_year])"
+						+ "VALUES (?,?,?,?,?)");
+
 		PreparedStatement stmt = conn.prepareStatement(query1);
-		 stmt.setString(1,title);
-		 stmt.setString(2,publisher);
-		 stmt.setString(3,genre);
-		 stmt.setString(4,author);
-		 stmt.setString(5,year);
-		 @SuppressWarnings("unused")
-		 int rs = stmt.executeUpdate();
-			
+		stmt.setString(1, title);
+		stmt.setString(2, publisher);
+		stmt.setString(3, genre);
+		stmt.setString(4, author);
+		stmt.setString(5, year);
+		@SuppressWarnings("unused")
+		int rs = stmt.executeUpdate();
+
 	}
 
 	public void showBooks() throws SQLException {
