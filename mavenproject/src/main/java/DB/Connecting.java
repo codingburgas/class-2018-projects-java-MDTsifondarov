@@ -5,7 +5,7 @@ import java.sql.SQLException;
 import java.sql.Connection;
 
 public class Connecting{
-	private String url = "jdbc:sqlserver://SD2311\\sqlexpress;databaseName=Library;integratedSecurity=true";
+	private String url = "jdbc:sqlserver://SD2310\\sqlexpress;databaseName=Library;integratedSecurity=true";
 	protected Connection conn;
 
 	public Connecting() throws SQLException {
